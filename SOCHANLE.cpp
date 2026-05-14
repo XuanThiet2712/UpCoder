@@ -28,7 +28,7 @@ ostream& operator << (ostream &out , CHUSOCHAN x){
 }
 
 bool operator < (CHUSOCHAN a , CHUSOCHAN b){
-	if (a.m > b.m ) return true ; 
+	if (a.m < b.m ) return true ; 
 	for(int i= a.m - 1;i>=0 ;i--){
 		if(a.value[i] < b.value[i] ) return true ; 
 		else if (a.value[i] > b.value[i]) return false ;
@@ -44,7 +44,7 @@ int tongThanhPhan(CHUSOCHAN a , int b = 0){
 		}
 	}
 	else {
-		for(int i=a.m-1;i>=0;i-=2)){
+		for(int i=a.m-2;i>=0;i-=2){
 			sum += a.value[i] ; 
 		}
 	}
