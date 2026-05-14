@@ -3,25 +3,15 @@ using namespace std ;
 
 struct CHUSOCHAN{
 	int n ; 
-	int value ; 
-	int k1 ; 
+	int value[10] ; 
+	int m ; 
 	void valueCSC(){
-		value = 0 ; 
 		int x = n ; 
-		int k = 1 ; 
+		m = 0 ; 
 		while(x > 0){
+			value[m] = ( x % 10) ; 
+			m++;
 			x /= 10 ; 
-			if (x <= 0) break ; 
-			k *= 10 ; 
-		}
-		k1 = k ;
-		x = n  ; 
-
-		while(x > 0){
-			value = value * 10 + x/k ;
-			k /= 10 ;
-			x = x % k  ; 
-			k /= 10 ; 
 		}
 	}
 };
@@ -31,33 +21,31 @@ istream& operator >> (istream& in , CHUSOCHAN &x) {
 	return in ; 
 }
 ostream& operator << (ostream &out , CHUSOCHAN x){
-	out << x.value ;
+	for(int i=x.m - 1 ;i>=0;i-=2){
+		out << x.value[i];
+	}
 	return out ; 
 }
 
 bool operator < (CHUSOCHAN a , CHUSOCHAN b){
-	return a.value < b.value ;
+	if (a.m > b.m ) return true ; 
+	for(int i= a.m - 1;i>=0 ;i--){
+		if(a.value[i] < b.value[i] ) return true ; 
+		else if (a.value[i] > b.value[i]) return false ;
+	}
+	return false ; 
 }
 
 int tongThanhPhan(CHUSOCHAN a , int b = 0){
 	int sum = 0 ; 
-	int x = a.n ; 
 	if(b == 0){
-		while(x > 0){
-			sum += (x / a.k1 );
-			if(x < 100 ) break ; 
-			x %= 100 ;
-			a.k1 /= 100 ;
+		for(int i=a.m-1;i>=0;i-=2){
+			sum += a.value[i] ; 
 		}
 	}
-	else{
-		x %= a.k1; 
-		a.k1 /= 10 ;
-		while(x > 0){
-			sum += (x / a.k1);
-			if(x < 100) break ; 
-			x %= 100 ; 
-			a.k1 /= 100 ;
+	else {
+		for(int i=a.m-1;i>=0;i-=2)){
+			sum += a.value[i] ; 
 		}
 	}
 	return sum ; 
@@ -69,6 +57,7 @@ int main(){
 	cout << endl <<( (a < b) ? "true" : "false" )<<endl;
 	int choi ; 
 	cin >> choi ; 
-	cout << tongThanhPhan(a , choi);
+	cout << tongThanhPhan(a , choi) << endl ;
+	cout << tongThanhPhan(b , choi) ;
 	
 }
