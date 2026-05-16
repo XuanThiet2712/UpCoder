@@ -57,6 +57,6 @@ int main(){
 		}
 	}
 
-	x.xuat();;
+	x.xuat();
 	y.xuat();
 }
