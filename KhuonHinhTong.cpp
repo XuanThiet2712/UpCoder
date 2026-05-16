@@ -40,9 +40,9 @@ struct Array{
 		}
 		if (n == 0) cout << "khong co" << endl ;
 		else
-		cout << sum <<endl; 
+			cout << sum <<endl; 
 	}
-		
+	
 };
 int main(){
 	Array<int> x ; 
@@ -56,7 +56,7 @@ int main(){
 			y.nhap();
 		}
 	}
-
+	
 	x.xuat();
 	y.xuat();
 }
