@@ -27,7 +27,7 @@ PhanSo operator + (PhanSo x , PhanSo y){
 
 template<class T>
 struct Array{
-	int n ;
+	int n = 0;
 	T a[100];
 	void nhap(){
 		cin >> a[n++];
@@ -42,8 +42,7 @@ struct Array{
 		else
 		cout << sum <<endl; 
 	}
-	
-	
+		
 };
 int main(){
 	Array<int> x ; 
