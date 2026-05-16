@@ -32,6 +32,15 @@ struct Array{
 		}
 		return min1;
 	}
+	
+	void xuat(){
+		if(n == 0){
+			cout << "khong co\n" ; 
+		}
+		else{
+			cout << Min() << endl ; 
+		}
+	}
 };
 int main(){
 	Array<int> a ;
@@ -49,17 +58,11 @@ int main(){
 			c.nhap();
 		}
 	}
-	if(a.n == 0 )
-		cout << "khong co\n";
-	else
-		cout << a.Min() << "\n";
-	if(b.n == 0 )
-		cout << "khong co\n";
-	else
-		cout << b.Min() << "\n";
-	if(c.n == 0 )
-		cout << "khong co\n";
-	else
-		cout << c.Min() ;
+
+	a.xuat() ;
+
+	b.xuat() ;
+
+	c.xuat();
 	
 }
