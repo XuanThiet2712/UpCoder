@@ -2,7 +2,6 @@
 using namespace std ; 
 struct PhanSo{
 	int tu , mau ; 
-	
 };
 istream& operator >> (istream& in  , PhanSo &x){
 	in >> x.tu >> x.mau ; 
