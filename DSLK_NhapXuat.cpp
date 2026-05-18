@@ -33,7 +33,7 @@ void xuat(Node *head ){
 int main(){
 	Node *head = NULL ; 
 	int data ; 
-	while(data != -1){
+	while(true){
 		cin >> data ;
 		if (data == -1) break ; 
 		addHead(head , data);
