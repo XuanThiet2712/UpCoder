@@ -2,34 +2,37 @@
 #include <algorithm>
 #include <iomanip>
 #include <cmath>
+#include <cstdio>
+#include <cstring>
 
 using namespace std;
 
 struct SinhVien {
-	char* hoten;
+	char* hoTen;
 	int namSinh;
 	float diem[3];
 	
 	void nhap() {
-		hoten = new char[100];
+		hoTen = new char[100];
 		
-		cin >> ws ; 
-		
-		cin.getline(hoten, 100);
-		
+// 		cin.ignore();
+// 		fgets(hoTen , 100 , stdin);
+// 		hoTen[strcspn(hoTen , "\n")] = ' ';
+		cin >> ws ;
+		cin.getline(hoTen, 100);
 		cin >> namSinh;
-		
+		cin.ignore();
 		for (int i = 0; i < 3; i++) {
 			cin >> diem[i];
 		}
 	}
 	
-	double DTB() {
+	float DTB() {
 		return (diem[0] + diem[1] + diem[2]) / 3 ;
 	}
 	
 	void xuat() {
-		cout << hoten;
+		cout << hoTen;
 		cout << " - " << namSinh;
 		cout << " - " << fixed << setprecision(2) << DTB();
 	}
@@ -41,15 +44,20 @@ void NhapDSLSV(SinhVien a[], int n) {
 	}
 }
 
-bool cmp(SinhVien a, SinhVien b) {
-	return a.DTB() > b.DTB();
+// bool cmp(SinhVien a, SinhVien b) {
+// 	return a.DTB() > b.DTB();
+// }
+
+void DecreaseSV(SinhVien *a, int n) {
+// 	sort(a, a + n, cmp);
+	for (int i = 0 ; i < n ; i++){
+		for (int j = i ; j < n ; j++){
+			if(a[i].DTB() < a[j].DTB()) swap(a[i] , a[j]) ; 
+		}
+	}
 }
 
-void DecreaseSV(SinhVien a[], int n) {
-	sort(a, a + n, cmp);
-}
-
-void XuatDSLSV(SinhVien a[], int n) {
+void XuatDSLSV(SinhVien *a, int n) {
 	for (int i = 0; i < n; i++) {
 		cout <<i+1 << " - " ;
 		a[i].xuat();
