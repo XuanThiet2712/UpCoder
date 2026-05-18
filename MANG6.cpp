@@ -20,13 +20,12 @@ int main(){
 	for (int i = 0 ;  i < n ; i++){
 		cin >> a[i] ;
 	}
-	for(int i=0;i<=0;i++){
+	for(int i=0;i<n;i++){
 		if(So9P(a[i])) cout << a[i] << " " ; 
 	}
 	cout << endl ; 
-	for(int i=0;i<=0;i++){
+	for(int i=0;i<n;i++){
 		if(SNT(a[i])) cout << a[i] << " " ; 
 	}
-	
 	
 }
