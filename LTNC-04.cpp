@@ -1,14 +1,19 @@
 #include <iostream>
-#include <vector>
+#include <queue>
 using namespace std ; 
 int main(){
-	vector<char> v = {'a' , 'b' , 'c' , 'd' , 'e' , 'f'};
+	string s = "abcdef";
+	queue<char> q ; 
 	int n ; cin >> n ; 
-	for (int i = 1 ; i <= n ; i++){
-		v.push_back(v.front());
-		v.erase(v.begin());
+	for(int i=0;i<s.size() ; i++){
+		q.push(s[i]);
 	}
-	for (char x : v){
-		cout << x ;
+	while(n--){
+		q.push(q.front());
+		q.pop();
+	}
+	while(!q.empty()){
+		cout << q.front() ; 
+		q.pop() ; 
 	}
 }
