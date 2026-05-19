@@ -4,7 +4,9 @@ using namespace std;
 int main(){
 	stack<int> st ;
 	int n , choice , x ;
+	cin >> n ;
 	while(n--){
+		cin >> choice ; 
 		if(choice == 1){
 			cin >> x ; 
 			st.push(x);
