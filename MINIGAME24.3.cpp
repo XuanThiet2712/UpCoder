@@ -11,13 +11,13 @@ int main(){
 		int x ; cin >> x ; 
 		auto it = find(v.begin() , v.end() , x);
 		if(it != v.end()){
-			cout << "YES " << (it + 1 - v.begin()) << endl ;  
+			cout << "Yes " << (it + 1 - v.begin()) << endl ;  
 		}
 		else{
 			it = find_if(v.begin() , v.end() , [x](int a){
 				return a > x ;
 			});
-			cout << "NO " << (it + 1 - v.begin())  << endl ;
+			cout << "No " << (it + 1 - v.begin())  << endl ;
 		}
 	}
 }
