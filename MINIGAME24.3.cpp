@@ -1,23 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;  
 int main(){
-	int n ; cin >> n ; 
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cin.tie(0);
+	int n , q , x ; cin >> n ; 
+	
 	vector<int> v(n) ; 
 	for(int &x : v){
 		cin >> x ; 
 	}
-	int q ; cin >> q ;
+	cin >> q ;
 	while(q--){
-		int x ; cin >> x ; 
-		auto it = find(v.begin() , v.end() , x);
-		if(it != v.end()){
-			cout << "Yes " << (it + 1 - v.begin()) << endl ;  
-		}
-		else{
-			it = find_if(v.begin() , v.end() , [x](int a){
-				return a > x ;
-			});
-			cout << "No " << (it + 1 - v.begin())  << endl ;
-		}
+		cin >> x ; 
+		auto it = lower_bound(v.begin() , v.end() , x);
+		cout << (*it == x ? "Yes " : "No ") << it + 1 - v.begin() << endl ; 
 	}
+	//lower_bound O(logn) - > find() O(n)
 }
