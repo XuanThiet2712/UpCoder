@@ -2,6 +2,11 @@
 #include <stack>
 using namespace std ;
 int main(){
+	//giup chay nhanh hon
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	
 	string s ; 
 	cin >> s ; 
 	stack<int> st;
@@ -11,7 +16,7 @@ int main(){
 			st.push(i + 1);
 		}
 		if(s[i] == ')') {
-			cout << st.top() <<" " <<i + 1 << endl ; 
+			cout << st.top() <<" " <<i + 1 <<'\n' ; 
 			st.pop();
 		}
 	}
