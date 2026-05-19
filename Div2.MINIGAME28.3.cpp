@@ -26,7 +26,7 @@ int main(){
 			maxSt.pop(); // pop cùng lúc
 		}
 		else if(choice == 3){
-			cout << maxSt.top() << endl; // O(1) ✅
+			cout << maxSt.top() << endl; // O(1) 
 		}
 	}
 }
