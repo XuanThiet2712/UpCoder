@@ -14,7 +14,7 @@ int main(){
 	while(q--){
 		cin >> x ; 
 		auto it = lower_bound(v.begin() , v.end() , x);
-		cout << (*it == x ? "Yes " : "No ") << it + 1 - v.begin() << endl ; 
+		cout << (*it == x ? "Yes " : "No ") << it + 1 - v.begin() << '\n' ; 
 	}
 	//lower_bound O(logn) - > find() O(n)
 }
