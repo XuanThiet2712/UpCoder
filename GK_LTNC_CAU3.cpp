@@ -15,20 +15,17 @@ int main(){
 	v1.erase(it , v1.end());
 	it = remove_if(v2.begin() , v2.end() , isSquareNumber ) ;
 	v2.erase(it , v2.end()) ; 
-	
-	vector<int> hop ; 
-	vector<int> giao ; 
-	for(int x : v1) hop.push_back(x) ;
-	for(int x : v2) hop.push_back(x) ;
-	sort(hop.begin(),hop.end());
+	sort(v1.begin() , v1.end());
+	sort(v2.begin() , v2.end());
+	vector<int> res(v1.size() + v2.size()) ; 
+	merge(v1.begin(),v1.end(),v2.begin(),v2.end(),res.begin());
+	for(int x : res) cout << x <<" " ;
+	res.clear();
 	for(int x : v1){
 		if((find(v2.begin() , v2.end() , x )) != v2.end()){
-			giao.push_back(x);
-		}
-		
+			res.push_back(x);
+		}		
 	}
-	sort(giao.begin() , giao.end());
-	for(int &x : hop) cout << x <<" " ; 
 	cout << endl ; 
-	for(int &x : giao) cout << x <<" " ; 
+	for(int x : res) cout << x <<" " ; 
 }
