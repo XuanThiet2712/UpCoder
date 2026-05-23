@@ -5,6 +5,9 @@ int main(){
 	getline(cin , s); 
 	int n , m ;
 	cin >> n >> m ; 
-	string sc = s.substr( n , m ) ;
-	cout << sc ; 
+	if(n < 0 || m >= s.size()) 
+		cout << "gioi han khong dung" ; 
+	else
+	cout << s.substr( n , m - n + 1) ;
+
 }
