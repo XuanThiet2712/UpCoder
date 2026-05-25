@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std ; 
 int main(){
-	int n , r ; cin >> n >> r ; 
-	int a[n] , count = 0 , x = 0 ;
-	for(int i = 0 ; i < n ; i++){
+	long long n , r ; cin >> n >> r ; 
+	long long a[n] , count = 0 , x = 0 ;
+	for(long long i = 0 ; i < n ; i++){
 		cin >> a[i] ; 
 		if(a[i] >= r ) {
 			count++;
