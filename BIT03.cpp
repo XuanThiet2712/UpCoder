@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std ; 
 int main(){
-	int k ,mask , q ; 
+	long long k ,mask , q ; 
 	cin >> k >> mask >> q; 
 	int a[k] ;
 	for (int i = 0 ; i < k ; i++){
