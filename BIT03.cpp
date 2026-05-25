@@ -4,7 +4,7 @@ int main(){
 	int k ,mask , q ; 
 	cin >> k >> mask >> q; 
 	int a[k] ;
-	for (int i = k-1 ; i >= 0 ; i--){
+	for (int i = 0 ; i < k ; i++){
 		a[i] = mask % 2 ; 
 		mask /= 2 ; 
 	}
