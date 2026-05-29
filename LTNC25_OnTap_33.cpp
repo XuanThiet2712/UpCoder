@@ -3,12 +3,10 @@ using namespace std ;
 int main(){
 	string s ;
 	getline(cin , s ) ;
-	stringstream ss(s);
-	string tmp ;
 	string vowel = "aeiou";
 	int count = 0 ;
-	while(ss >> tmp){
-		if(find(vowel.begin() , vowel.end() , tmp[tmp.size()-1]) != vowel.end()){
+	for(char c : s){
+		if(find(vowel.begin() , vowel.end() , tolower(c)) != vowel.end()){
 			count++;
 		}
 	}
