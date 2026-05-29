@@ -6,7 +6,7 @@ int main(){
 	int ct = 0, ch  = 0; 
 	for(char c : s){
 		if(c >= 'a' && c <= 'z') ct++;
-		else ch++;
+		else if(c >= 'A' && c <= 'Z') ch++;
 	}
 	cout << "Chữ hoa: "<<ch << endl ;
 	cout << "Chữ thường: "<<ct ;
