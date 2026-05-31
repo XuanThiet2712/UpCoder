@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 int x ; 
-double S(int n) {
+long long S(int n) {
 	if (n == 0) return 1 ; 
 	return pow(x , n) + S(n-1);
 }
