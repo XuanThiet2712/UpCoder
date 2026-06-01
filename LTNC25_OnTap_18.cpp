@@ -5,7 +5,7 @@ int main(){
 	stack<char> st ; 
 	for(char c : s )
 		st.push(c) ; 
-	while(1st.empty()){
+	while(!st.empty()){
 		cout << st.top() ; 
 		st.pop();
 	}
