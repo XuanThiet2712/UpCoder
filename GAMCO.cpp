@@ -8,7 +8,7 @@ int dy[] = {0  , -1, 0 , 1};
 int cnt = 0 ; 
 
 void Try(int x , int y){
-	if(x == xC && y == yC){
+	if(x == xB && y == yB){
 		if(cnt < MIN) MIN = cnt ; 
 	}
 	else{
@@ -39,6 +39,7 @@ int main(){
 			}
 		}
 	}
-	Try(xB , yB);
+	a[xC][yC] = '*';
+	Try(xC , yC);
 	cout << MIN ; 
 }
