@@ -42,6 +42,6 @@ int main(){
 	for(int x : ketQua){
 		cout << x << " " ; 
 	}
-	cout << endl << tong ; 
+	cout << endl << res ; 
 	
 }
