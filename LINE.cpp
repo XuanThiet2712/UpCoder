@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <fstream>
 using namespace std ; 
 int n ,sy ,sx,  dy ,dx ; 
 int a[10][10] ; 
@@ -25,12 +26,17 @@ void Try(int x ,int y){
 }
 
 int main(){
-	cin >> n >> sy >> sx >> dy >> dx ; 
+	ifstream fin("LINE.inp");
+	ofstream fout("LINE.out");
+	fin >> n >> sy >> sx >> dy >> dx ; 
 	for(int i = 1 ; i <= n ; i++){
 		for(int j = 1 ; j <= n ; j++){
-			cin >> a[i][j] ; 
+			fin >> a[i][j] ; 
 		}
 	}
 	Try(sy,sx);
-	cout << (found ? "YES" : "NO") ;
+	fout << (found ? "YES" : "NO") ;
+	
+	fin.close();
+	fout.close();
 }
