@@ -8,7 +8,7 @@ int main(){
 		if(c == '(')
 			st.push(c);
 		else if(c == ')'){
-			if(st.top() == '(')
+			if(!st.empty())
 				st.pop();
 			else {
 				cout << "NO" ;
