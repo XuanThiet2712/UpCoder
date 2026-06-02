@@ -3,7 +3,7 @@ using namespace std ;
 struct ToaDo{
 	int x , y ; 
 };
-int m , n , res(-1) , tong(0);
+int m , n , res(-100) , tong(0);
 int a[100][100] ; 
 vector<ToaDo> duongDi , ketQua ; 
 int dx[] = {1 , 0};
@@ -21,7 +21,7 @@ void Try(int x , int y){
 		for (int i = 0 ; i < 2 ; i++){
 			int xx = x + dx[i] ; 
 			int yy = y + dy[i] ; 
-			if(xx >= 1 && x <= m && yy >= 1 && yy <= n){
+			if(xx >= 1 && xx <= m && yy >= 1 && yy <= n){
 				tong += a[xx][yy] ; 
 				duongDi.push_back({xx , yy });
 				Try(xx , yy ) ; 
@@ -42,7 +42,7 @@ int main(){
 	duongDi.push_back({1,1});
 	Try(1,1);
 	cout << res << endl ; 
-	for (auto x : ketQua){
-		cout << x.x << " " << x.y << endl ; 
+	for (auto xx : ketQua){
+		cout << xx.x << " " << xx.y << endl ; 
 	}
 }
