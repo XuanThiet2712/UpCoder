@@ -49,6 +49,7 @@ int main(){
 	}
 	VECTOR v = {xA , yA};
 	duongDi.push_back(v) ; 
+	cnt++;
 	Try(xA , yA) ; 
 	cout << MIN << endl ; 
 	for (VECTOR x : res){
