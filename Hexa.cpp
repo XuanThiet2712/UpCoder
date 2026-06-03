@@ -5,7 +5,7 @@ void Hex(long long n) {
 	if (n == 0) return;
 	Hex(n / 16);
 	int r = n % 16;
-	cout << r ; 
+	cout << s[r] ; 
 }
 
 int main() {
