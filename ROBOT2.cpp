@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std ; 
-int n , MIN(10000) ; 
+int n , MIN(100000) ; 
 string snp = "" ; 
 int a[105][105] ;
 int dx[] = {1 , 0 };
