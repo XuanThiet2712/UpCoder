@@ -2,7 +2,7 @@
 using namespace std ; 
 int n , MAX(0) ; 
 string snp = "" ; 
-int a[101][101] ;
+int a[105][105] ;
 int dx[] = {1 , 0 };
 int dy[] = {0 , 1 };
 void Try(int x, int y){
@@ -15,13 +15,16 @@ void Try(int x, int y){
 		int xx = x + dx[i] ; 
 		int yy = y + dy[i] ; 
 		if (xx >= 1 && xx <= n && yy >= 1 && yy <= n){
-			snp += to_string(a[xx][yy]);
+			snp += a[xx][yy] + '0';
 			Try(xx,yy);
-			snp.erase(snp.size()-1);
+			snp.pop_back();
 		}
 	}
 }
 int main(){
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
 	cin >> n ; 
 	for(int i = 1 ; i <= n ; i++){
 		for(int j = 1 ; j <= n ; j++){
@@ -30,6 +33,6 @@ int main(){
 	}
 	snp+=to_string(a[1][1]);
 	Try(1,1);
-
+	
 	cout << MAX ; 
 }
