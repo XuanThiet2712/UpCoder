@@ -5,7 +5,7 @@ struct ToaDo{
 	ToaDo(int a , int b ) : x(a) , y(b) {} 
 };
 int m , n , res(INT_MIN) , tong;
-int a[20][20] ; 
+int a[1001][1001] ; 
 vector<ToaDo> duongDi , ketQua ; 
 int dx[] = {1 , 0};
 int dy[] = {0 , 1};
