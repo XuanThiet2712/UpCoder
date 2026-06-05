@@ -21,7 +21,7 @@ void Try(int pos, int k) {
 			cur.pop_back();
 		}
 	}
-
+	
 }
 
 int main() {
@@ -30,7 +30,7 @@ int main() {
 		cin >> a[i];
 	sort(a, a + n);
 	cout << "()\n";
-	for (int k = 1; k <= n; i++) 
+	for (int k = 1; k <= n; k++) 
 		Try(0, k);
 	return 0;
 }
