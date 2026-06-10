@@ -1,1 +1,2 @@
 # UpCoder
+GroupCoder là một nền tảng học tập và luyện tập lập trình trực tuyến, cung cấp nhiều bài tập từ cơ bản đến nâng cao. Website hỗ trợ người học rèn luyện kỹ năng lập trình, tư duy thuật toán và khả năng giải quyết vấn đề thông qua hệ thống bài tập đa dạng cùng chức năng chấm bài tự động.
