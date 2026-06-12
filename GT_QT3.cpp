@@ -3,12 +3,14 @@
 using namespace std;
 int n , s , res(0);
 int a[100] ; 
+bool found ; 
 vector<int> v ;
 void Try(int i){
 	if(res == s){
 		for(int x : v)
 			cout << x << " ";
 		cout << endl;
+		found = 1 ; 
 		return;
 	}	
 	if(i == n) return;	
@@ -29,4 +31,5 @@ int main(){
 	for (int i = 0 ; i < n ; i++)
 		cin >> a[i] ; 
 	Try(0);
+	if(!found) cout << -1;
 }
