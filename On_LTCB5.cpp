@@ -7,7 +7,7 @@ int main(){
 		cin >> x ; 
 	int cnt = 1 ; 
 	for(int i = 1 ; i < n ; i++){
-		if(a[i] > a[i-1]) cnt++;
+		if(a[i] >= a[i-1]) cnt++;
 	}
 	cout << cnt ; 
 }
