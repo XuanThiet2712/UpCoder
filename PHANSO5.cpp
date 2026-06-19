@@ -15,12 +15,13 @@ PhanSo operator ++ (PhanSo &x){
 	return {x.tu + 1 , x.mau } ; 
 }
 PhanSo operator -- (PhanSo &x){
-	return {x.mau - 1 , x.mau } ; 
+	return {x.tu - 1 , x.mau } ; 
 }
-int main(){
-	PhanSo x;
-	string c;
-	cin>>x>>c;
-	cout<<x<<endl;
-	cout << (c == "++" ? ++x : --x) ; 
+int main() {
+	PhanSo a;
+	string x;
+	cin >> a >> x;
+	cout << a << endl;
+	cout << (x == "++" ? ++a : --a);
+	return 0;
 }
