@@ -3,8 +3,8 @@ using namespace std ;
 struct PS{
 	int tu , mau ; 
 	void rutgon(){
-		int a = tu ; 
-		int b = mau ; 
+		int a = abs(tu) ; 
+		int b = abs(mau); 
 		while(b != 0){
 			int r = a % b ; 
 			a = b ;
@@ -19,7 +19,10 @@ istream& operator >> (istream& in , PS &x){
 	return in ; 
 }
 ostream& operator << (ostream& out , PS x){
-	out << x.tu << "/" <<x.mau ; 
+	if(x.mau == 0 ) 
+		out << -1;
+	else 
+		out << x.tu << "/" <<x.mau ; 
 	return out ; 
 }
 PS operator + (PS a , PS b ){
