@@ -13,5 +13,7 @@ int main(){
 		cnt++ ; 
 		pos = T.find(P , pos + 1) ;
 	}
+	if(cnt == 0) cout << -1 ; 
+	else 
 	cout << cnt ; 
 }
