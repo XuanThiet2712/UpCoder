@@ -10,4 +10,5 @@ int main(){
 		n /= 10 ; 
 	}
 	cout << max1 + min1 ; 
+	
 }
